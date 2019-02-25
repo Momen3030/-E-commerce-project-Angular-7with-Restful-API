@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <br>
+  <button class="btn btn-success"  *ngIf="auth.isLoggednIn()" (click)="addNewProduct()"> Add New Product </button>
+  <br>
+  <br>
+  <table class="table table-striped table-responsive text-center">
+    <thead>
+    <tr class="bg-dark text-success">
+      <th scope="col" >  Name </th>
+      <th scope="col" >  Description </th>
+      <th scope="col" >  Image </th>
+      <th  scope="col">  Details </th>
+      <th scope="col" > Add To card </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of prods ">
+      <td>{{product.proudctName}}</td>
+      <td>{{product.proudctDetail}} </td>
+      <td> <img style="width:20% ;height: 20%" src="../../assets/{{product.proudctImage}}"> </td>
+      <td><button class="btn btn-info" (click)="productDetails(product.id)"> Details </button></td>
+      <td><button class="btn btn-danger"(click)="delete(product.id)" > Delete </button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

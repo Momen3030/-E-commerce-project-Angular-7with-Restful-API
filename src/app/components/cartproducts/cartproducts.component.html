@@ -1,0 +1,17 @@
+<br>
+<div class="container-fluid">
+  <div class="row" >
+    <div  class="col" *ngFor="let cart of cartOfIdProudcts let index = i">
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.91-img.com/gallery_images_uploads/5/0/50faa79e1ce90b0e073f97ff714e091069cb1f82.jpg?w=0&h=901&q=80&c=1">
+        <div class="card-body text-center ">
+          <h4 class="card-title text-success">Product Name : {{cart}}</h4>
+          <p class="card-text"> <span class="text-info"> Product Detail : </span> <span class="text-primary">{{cart}}</span> </p>
+          <button  class="btn btn-success ml-2 mr-2" *ngIf="!auth.isLoggednIn()" routerLink="/login">login First</button>
+          <button  class="btn btn-info ml-2 mr-2" *ngIf="auth.isLoggednIn()" (click)="auth.logout()">Buy</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

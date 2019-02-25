@@ -1,0 +1,72 @@
+<br>
+<div class="container-fluid">
+  <div class="row" >
+    <div  class="col-sm-5" >
+      <div class="card" style="width: 18rem;">
+        <img src="assets/{{proudct.proudctImage}}" >
+        <div class="card-body text-center ">
+          <h4 class="card-title text-success">Product Name : {{ proudct.proudctName}}</h4>
+          <p class="card-text"> <span class="text-success"> Product Detail : </span> {{proudct.proudctDetail}} </p>
+          <div><h5> <span class="text-success">Price</span> :{{ proudct.price|currency:'EGP'}}</h5></div>
+          <br>
+          <a  (click)="goBack()" class="btn  btn-danger text-white"> Back </a>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-sm-7">
+    <div class="row">
+       <h2> Key Specs</h2>
+    </div>
+    <div class="row mt-2">
+      <img  class="mr-2" style="width: 3%;height:3% " src="https://image.flaticon.com/icons/svg/214/214490.svg">
+      Android v6.0 (Marshmallow)
+    </div>
+    <div class="row">
+      <div class="col">
+        <hr>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-sm-3" >
+        <h5>Performance</h5>
+        <div>Octa Core</div>
+        <div>Snapdragon 820</div>
+        <div>3 GB RAM</div>
+      </div>
+      <div class="col-sm-3" >
+        <h5>Display</h5>
+        <div>5.0 inches (12.7 cm)</div>
+        <div>Full HD, 441 PPI</div>
+        <div>IPS LCD</div>
+      </div>
+      <div class="col-sm-3" >
+        <h5>Camera</h5>
+        <div>Octa Core</div>
+        <div>Snapdragon 820</div>
+        <div>3 GB RAM</div>
+      </div>
+      <div class="col-sm-3" >
+        <h5>Battery</h5>
+        <div>4000 mAh</div>
+        <div>Snapdragon 820</div>
+      </div>
+    </div>
+     <div class="row">
+       <div class="col">
+       <hr>
+       </div>
+     </div>
+    <div class="row mt-1">
+      <div class="col-sm-3" >   Supports Indian bands32 </div>
+      <div class="col-sm-3" >  GB + 128 GB ExpandableDual </div>
+      <div class="col-sm-3" >  SIM: MicroGorilla </div>
+      <div class="col-sm-3" >  Glass 4FM Radio </div>
+    </div>
+    </div>
+
+
+
+</div>
+
+</div>

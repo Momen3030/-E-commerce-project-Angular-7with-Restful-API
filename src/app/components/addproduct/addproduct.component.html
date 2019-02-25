@@ -1,0 +1,45 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-8">
+<form  (submit)="SubmitData()" #prdForm="ngForm">
+  <div class="form-group">
+    <label for="prodName">Product Name</label>
+    <input #prdName="ngModel" style="width:65%" [(ngModel)]='newProduct.proudctName' required type="text"  [ngModelOptions]="{standalone: true}" name="proudctName" class="form-control" id="prodName" placeholder="Enter Product Name">
+    <div [hidden]="prdName.valid || prdName.pristine"
+         class="alert alert-danger w-65">
+      Name is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="prodPrice">Product Detail</label>
+    <input [ngModelOptions]="{standalone: true}" style="width:65%" [(ngModel)]='newProduct.proudctDetail' type="text" name="proudctDetail" class="form-control" id=" prodPrice" placeholder="Enter Product Detail">
+  </div>
+
+  <div class="form-group">
+    <label for="prodPrice">Product Price</label>
+    <input   style="width:65%" [(ngModel)]='newProduct.price' [ngModelOptions]="{standalone: true}" type="number" name="price" class="form-control" id="prodPrice" placeholder="Enter Product Price">
+  </div>
+
+  <div class="form-group">
+    <label for="prodQuantity">Product Quantity</label>
+    <input style="width:65%" [(ngModel)]='newProduct.quantity' type="number"  [ngModelOptions]="{standalone: true}" name="quantity" class="form-control" id="prodQuantity" placeholder="Enter Product Quantity">
+  </div>
+
+  <select  [ngModelOptions]="{standalone: true}"  [(ngModel)]='newProduct.cat_id' >
+    <option  *ngFor="let cat of cats"  [value]="cat.id" >{{cat.categoryName}}</option>
+  </select>
+  <br>
+    <div class="form-group">
+     <input type="file" ngf [(file)]="newProduct.proudctImage" name="name" />
+    </div>
+    <!--<input type="file" [ngModel]="newProduct.proudctImage" [ngModelOptions]="{standalone: true}">-->
+  <br>
+  <input value="Save" type="submit" class="btn btn-primary btn-lg " [disabled]="!prdForm.form.valid">
+</form>
+  </div>
+  </div>
+  <div class="col-1"></div>
+</div>

@@ -1,0 +1,41 @@
+
+ <!--<form [formGroup] ='form'  (ngSubmit)="login()">-->
+      <!--<input  type="email" placeholder="Email" formControlName="email" />-->
+      <!--<input type="password" placeholder="Password" formControlName="password" />-->
+    <!--<button  type="submit">Login</button>-->
+  <!--</form>-->
+
+<br>
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-3"></div>
+         <div class="col-lg-6">
+             <div class="card">
+                 <h3 class="card-header text-center">Log in</h3>
+                 <div class="card-body">
+                     <form class="mx-auto"  [formGroup] ='form'  (ngSubmit)="login()" >
+                         <div class="mx-auto">
+                             <div class="input-group ml-5">
+                                 <div class="input-group-prepend">
+                                     <label class="font-weight-bold mt-1">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                                     <span class="input-group-text" id="basic-add1"><i class="fa fa-user"></i></span>
+                                 </div>
+                                 <input type="text" style="max-width: 50%" formControlName="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-add1">
+                             </div><br>
+                             <div class="input-group ml-5">
+                                 <div class="input-group-prepend">
+                                     <label class="font-weight-bold mt-1">Password&nbsp; &nbsp;: &nbsp;</label>
+                                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"></i></span>
+                                 </div>
+                                 <input type="password" style="max-width: 50%" class="form-control" placeholder="password" formControlName="password" aria-label="Password" aria-describedby="basic-addon1">
+                             </div>
+                         </div><br>
+                         <button  type="submit" class="btn btn-success btn-block">Log In</button>
+                     </form>
+                 </div>
+                 <h2 class="card-footer text-center"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h2>
+             </div>
+         </div>
+     </div>
+ </div>
+
